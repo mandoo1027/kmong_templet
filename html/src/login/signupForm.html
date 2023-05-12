@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIZDRM</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../assets/css/_common.css" />
+    <script src="../../assets/js/jquery-2.2.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../tailwind.config.js"></script>
+    <script src="../../assets/js/common.js" defer></script>
+  </head>
+
+  <body>
+    <header class="bg-white sticky shadow-sm top-0 z-20 xl:h-[74px]">
+      <!-- PC 네비게이션 -->
+      <nav class="relative h-full w-full flex justify-between items-center bg-white mx-auto xl:p-0 xl:w-[1200px]">
+        <a class="p-0 flex-shrink-0 leading-none" href="../main/main.html">
+          <div class="logo"></div>
+        </a>
+        <div class="xl:hidden">
+          <button class="navbar-burger flex items-center text-biz-red p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden xl:flex xl:ml-auto xl:flex xl:items-center xl:w-auto xl:space-x-[45px] h-full">
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../main/main.html"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]" href="#"
+              >서비스 소개</a
+            >
+          </li>
+          <li>
+            <a class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]" href="#"
+              >고객지원</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../data/dataManagement.html"
+              >데이터 관리</a
+            >
+          </li>
+          <li class="nav-item relative">
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../main/campaign/campaign.html"
+              >캠페인</a
+            >
+            <div class="sub-menu rounded-b-lg hidden absolute w-[150px] left-0 bg-[#f05050] z-10">
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/lead.html">리드</a>
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/list.html">리스트</a>
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/campaign.html">캠페인</a>
+            </div>
+          </li>
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../plan/plan.html"
+              >플랜</a
+            >
+          </li>
+        </ul>
+        <div class="hidden xl:flex items-center justify-end xl:ml-12 xl:mt-0 xl:justify-start">
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-10"
+            ><span class="login-icon mr-1"></span><span>로그인</span></a
+          >
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+            ><span class="logout-icon mr-1"></span><span>회원가입</span></a
+          >
+        </div>
+        <!-- 2 . 로그인 후 -->
+        <!-- <div class="hidden xl:flex items-center justify-end xl:ml-12 xl:mt-0 xl:justify-start">
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-10"
+            ><span class="login-icon mr-1"></span><span>로그아웃</span></a
+          >
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+            ><span class="logout-icon mr-1"></span><span>김호진님</span></a
+          >
+        </div> -->
+      </nav>
+      <!-- MOBILE 네비게이션 -->
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-3 px-6 bg-white border-r overflow-y-auto">
+          <div class="flex items-center mb-8">
+            <a class="p-0 mr-auto" href="../main/main.html">
+              <div class="logo"></div>
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="../main/main.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="#">서비스 소개</a>
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="#">고객지원</a>
+              </li>
+              <li class="mb-1">
+                <a
+                  class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]"
+                  href="../data/dataManagement.html"
+                  >데이터 관리</a
+                >
+              </li>
+              <li class="mb-1">
+                <details>
+                  <summary class="nav-link py-2 w-full h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="">
+                    캠페인
+                    <svg
+                      data-accordion-icon
+                      class="w-6 h-6 shrink-0 ml-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </summary>
+                  <div class="sub-menu rounded-b-lg block">
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/lead.html">리드</a>
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/list.html">리스트</a>
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/campaign.html">캠페인</a>
+                  </div>
+                </details>
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="../plan/plan.html"
+                  >플랜</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <div class="flex justify-end">
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-md flex items-center mr-4"
+                ><span class="login-icon mr-1"></span><span>로그인</span></a
+              >
+              <a href="../login/signup.html" class="no-underline flex items-center text-black font-bold text-md flex items-center"
+                ><span class="logout-icon mr-1"></span><span>회원가입</span></a
+              >
+            </div>
+            <!-- 2 . 로그인 후 -->
+            <!-- <div class="flex justify-end">
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-4"
+                ><span class="login-icon mr-1"></span><span>로그아웃</span></a
+              >
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+                ><span class="logout-icon mr-1"></span><span>김호진님</span></a
+              >
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="bg-gray-f5">
+      <div class="signup-page">
+        <div class="w-[90%] lg:w-[384px] mx-auto pt-[60px] pb-[100px]">
+          <figure class="logo">
+            <img src="../../assets/images/common/logo.svg" alt="BIZDRM" />
+          </figure>
+          <form action="">
+            <fieldset>
+              <legend class="text-center font-bold mb-20">비즈디알엠 회원가입</legend>
+              <ul>
+                <li class="mb-4">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userId">아이디</label>
+                  <div class="flex">
+                    <input
+                      type="text"
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      id="userId"
+                      placeholder="영문+숫자 포함 최소 6자"
+                      minlength="6"
+                      required
+                    />
+                    <button class="check-button py-3 font-bold text-sm text-white bg-biz-red shrink-0 ml-[10px] leading-none" type="button">
+                      중복확인
+                    </button>
+                  </div>
+                  <p class="text-[12px] text-[#d10000] font-normal mt-[10px]">중복된 아이디 입니다.</p>
+                </li>
+                <li class="basic-input-wrap mb-4">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userPwd1">비밀번호</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="password"
+                      id="userPwd1"
+                      placeholder="영문+숫자+특수문자 포함 최소 8자 이상"
+                      minlength="8"
+                      required
+                    />
+                  </div>
+                  <p class="text-[12px] text-[#d10000] font-normal mt-[10px]">영문+숫자+특수문자 포함 최소 8자 이상으로 설정해 주세요.</p>
+                </li>
+                <li class="basic-input-wrap mb-8 lg:mb-16">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userPwd2">비밀번호 확인</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="password"
+                      id="userPwd2"
+                      placeholder="비밀번호를 입력해 주세요."
+                      minlength="8"
+                      required
+                    />
+                  </div>
+                  <p class="text-[12px] text-[#d10000] font-normal mt-[10px]">비밀번호가 일치하지 않습니다.</p>
+                </li>
+                <li class="basic-input-wrap mb-6">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userName">이름</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="text"
+                      id="userName"
+                      placeholder="실명을 입력해 주세요."
+                    />
+                  </div>
+                </li>
+                <li class="basic-input-wrap mb-6">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userBirth">생년월일</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="text"
+                      inputmode="numeric"
+                      id="userBirth"
+                      placeholder="년(4자)"
+                      minlength="4"
+                    />
+                    <select class="basic-select" name="" id="">
+                      <option value="none">월</option>
+                      <option value="1">1월</option>
+                      <option value="2">2월</option>
+                      <option value="3">3월</option>
+                      <option value="4">4월</option>
+                      <option value="5">5월</option>
+                      <option value="6">6월</option>
+                      <option value="7">7월</option>
+                      <option value="8">8월</option>
+                      <option value="9">9월</option>
+                      <option value="10">10월</option>
+                      <option value="11">11월</option>
+                      <option value="12">12월</option>
+                    </select>
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="text"
+                      inputmode="numeric"
+                      id="userBirth"
+                      placeholder="일"
+                    />
+                  </div>
+                </li>
+                <li class="basic-input-wrap mb-6">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userEmail">본인확인 이메일</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="email"
+                      id="userEmail"
+                      placeholder="이메일을 입력해 주세요."
+                    />
+                  </div>
+                </li>
+                <li class="basic-input-wrap mb-16">
+                  <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userTel">휴대전화</label>
+                  <div class="flex">
+                    <input
+                      class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                      type="text"
+                      id="userTel"
+                      placeholder="전화번호를 입력해 주세요."
+                    />
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+            <div class="flex justify-between gap-6">
+              <button onclick="location.href='./signupComplete.html'" class="w-full py-3 text-sm font-bold text-white bg-biz-red leading-none">
+                가입하기
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#a6a6a6]">
+      <div class="footer-inner default-inner flex flex-col py-4 lg:p-3 lg:py-[100px] lg:px-[75px] lg:flex-row lg:items-center">
+        <figure class="footer-logo lg:mr-[89px] w-[185px] h-[89px]">
+          <img src="../../assets/images/common/logo.svg" alt="BIZDRM" />
+        </figure>
+        <div class="footer-content">
+          <div class="flex mb-10">
+            <a class="text-sm text-black mr-6 lg:text-lg" href="">서비스 이용약관</a>
+            <a class="text-sm text-black lg:text-lg" href="">개인정보처리방침</a>
+          </div>
+          <p class="text-sm mb-0 lg:text-lg">
+            아이에이엠파트너즈 I 통신판매신고번호 : 2021-충부청주-1203 I 대표이사 : 김현민 iampatners2023@gmail.com
+          </p>
+          <p class="text-sm mb-0 mt-1 lg:text-lg">고객센터 : 063-244-2919 I 주소 : 전라북도 전주시 덕진구 인후동1가 500-48</p>
+          <p class="text-sm mt-10 mb-0 lg:text-lg">Copyright (c) Iampartners All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

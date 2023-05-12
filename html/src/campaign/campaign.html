@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIZDRM</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../../assets/css/_common.css" />
+    <script src="../../assets/js/jquery-2.2.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../tailwind.config.js"></script>
+    <script src="../../assets/js/common.js" defer></script>
+  </head>
+
+  <body>
+    <header class="bg-white sticky shadow-sm top-0 z-20 xl:h-[74px]">
+      <!-- PC 네비게이션 -->
+      <nav class="relative h-full w-full flex justify-between items-center bg-white mx-auto xl:p-0 xl:w-[1200px]">
+        <a class="p-0 flex-shrink-0 leading-none" href="../main/main.html">
+          <div class="logo"></div>
+        </a>
+        <div class="xl:hidden">
+          <button class="navbar-burger flex items-center text-biz-red p-3">
+            <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <title>Mobile menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+          </button>
+        </div>
+        <ul class="hidden xl:flex xl:ml-auto xl:flex xl:items-center xl:w-auto xl:space-x-[45px] h-full">
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../main/main.html"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]" href="#"
+              >서비스 소개</a
+            >
+          </li>
+          <li>
+            <a class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]" href="#"
+              >고객지원</a
+            >
+          </li>
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../data/dataManagement.html"
+              >데이터 관리</a
+            >
+          </li>
+          <li class="nav-item relative">
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../main/campaign/campaign.html"
+              >캠페인</a
+            >
+            <div class="sub-menu rounded-b-lg hidden absolute w-[150px] left-0 bg-[#f05050] z-10">
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/lead.html">리드</a>
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/list.html">리스트</a>
+              <a class="sub-menu-item text-center no-underline text-lg py-3 bg-biz-red relative" href="../campaign/campaign.html">캠페인</a>
+            </div>
+          </li>
+          <li>
+            <a
+              class="nav-link px-0 relative flex items-center font-bold hover:text-biz-red text-[16px] text-center text-[#454545] h-[74px]"
+              href="../plan/plan.html"
+              >플랜</a
+            >
+          </li>
+        </ul>
+        <div class="hidden xl:flex items-center justify-end xl:ml-12 xl:mt-0 xl:justify-start">
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-10"
+            ><span class="login-icon mr-1"></span><span>로그인</span></a
+          >
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+            ><span class="logout-icon mr-1"></span><span>회원가입</span></a
+          >
+        </div>
+        <!-- 2 . 로그인 후 -->
+        <!-- <div class="hidden xl:flex items-center justify-end xl:ml-12 xl:mt-0 xl:justify-start">
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-10"
+            ><span class="login-icon mr-1"></span><span>로그아웃</span></a
+          >
+          <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+            ><span class="logout-icon mr-1"></span><span>김호진님</span></a
+          >
+        </div> -->
+      </nav>
+      <!-- MOBILE 네비게이션 -->
+      <div class="navbar-menu relative z-50 hidden">
+        <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+        <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-3 px-6 bg-white border-r overflow-y-auto">
+          <div class="flex items-center mb-8">
+            <a class="p-0 mr-auto" href="../main/main.html">
+              <div class="logo"></div>
+            </a>
+            <button class="navbar-close">
+              <svg
+                class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="../main/main.html"
+                  >HOME</a
+                >
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="#">서비스 소개</a>
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="#">고객지원</a>
+              </li>
+              <li class="mb-1">
+                <a
+                  class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]"
+                  href="../data/dataManagement.html"
+                  >데이터 관리</a
+                >
+              </li>
+              <li class="mb-1">
+                <details>
+                  <summary class="nav-link py-2 w-full h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="">
+                    캠페인
+                    <svg
+                      data-accordion-icon
+                      class="w-6 h-6 shrink-0 ml-auto"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </summary>
+                  <div class="sub-menu rounded-b-lg block">
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/lead.html">리드</a>
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/list.html">리스트</a>
+                    <a class="sub-menu-item text-center no-underline text-md py-2 text-black lg:py-3" href="../campaign/campaign.html">캠페인</a>
+                  </div>
+                </details>
+              </li>
+              <li class="mb-1">
+                <a class="nav-link py-2 h-full relative flex items-center font-bold text-md text-center text-[#454545]" href="../plan/plan.html"
+                  >플랜</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mt-auto">
+            <div class="flex justify-end">
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-md flex items-center mr-4"
+                ><span class="login-icon mr-1"></span><span>로그인</span></a
+              >
+              <a href="../login/signup.html" class="no-underline flex items-center text-black font-bold text-md flex items-center"
+                ><span class="logout-icon mr-1"></span><span>회원가입</span></a
+              >
+            </div>
+            <!-- 2 . 로그인 후 -->
+            <!-- <div class="flex justify-end">
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center mr-4"
+                ><span class="login-icon mr-1"></span><span>로그아웃</span></a
+              >
+              <a href="../login/login.html" class="no-underline flex items-center text-black font-bold text-sm flex items-center"
+                ><span class="logout-icon mr-1"></span><span>김호진님</span></a
+              >
+            </div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="campaign-page bg-biz-light-red">
+        <div class="w-[90%] py-[50px] mx-auto xl:w-[1200px] xl:pt-[57px] xl:pb-[89px]">
+          <ul class="flex flex-col gap-4 lg:flex-row">
+            <li class="p-[15px] col bg-white rounded-md lg:pt-[28px] lg:pb-[24px] lg:px-[22px]">
+              <form action="">
+                <h2 class="text-biz-red font-bold text-center mb-4 text-lg xl:mb-8">캠페인 대상</h2>
+                <ul>
+                  <li class="basic-input-wrap mb-6">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userApi">API Key</label>
+                    <div class="flex">
+                      <input
+                        class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px] rounded-md"
+                        type="text"
+                        id="userApi"
+                        placeholder="API 키를 입력해 주세요."
+                      />
+                    </div>
+                  </li>
+                  <li class="basic-input-wrap mb-4">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="listId">List 아이디</label>
+                    <div class="flex">
+                      <input
+                        class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px] rounded-md"
+                        type="text"
+                        id="listId"
+                        placeholder="List 아이디를 입력해 주세요."
+                      />
+                    </div>
+                  </li>
+                </ul>
+                <div>
+                  <button class="w-full py-3 text-sm font-bold text-white bg-biz-red leading-none rounded-md">리스트 조회하기</button>
+                </div>
+              </form>
+              <section class="mt-12">
+                <h3 class="font-bold text-lg mb-3 flex flex-col justify-between gap-2 lg:flex-row lg:items-center">
+                  리드 목록
+                  <div class="flex gap-1">
+                    <button class="p-2 text-sm rounded-sm text-white bg-biz-purple leading-none font-normal" type="button">선택전송</button>
+                    <button class="p-2 text-sm rounded-sm text-white bg-biz-green leading-none ml-25 font-normal" type="button">
+                      현재 페이지 전송
+                    </button>
+                    <button class="p-2 text-sm rounded-sm text-white bg-biz-red leading-none ml-25 font-normal" type="button">모두전송</button>
+                  </div>
+                </h3>
+                <div class="table-wrap table-responsive flex flex-col h-full bg-white justify-between mb-4">
+                  <table class="red-table table table-borderless table-striped mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-center" colspan="3">리드코드</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                      <tr>
+                        <th class="text-center" scope="row">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." />
+                          </div>
+                        </th>
+                        <td class="text-center">afldkajfldkajfldak</td>
+                        <td class="text-center">리드</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center gap-x-2">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  </ul>
+                  <!-- <ul class="pagination justify-content-center gap-x-2">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a>
+                    </li>
+                  </ul> -->
+                </nav>
+              </section>
+            </li>
+            <li class="p-[15px] col bg-white rounded-md lg:pt-[28px] lg:pb-[24px] lg:px-[22px]">
+              <form action="">
+                <h2 class="text-biz-red font-bold text-center mb-4 text-lg xl:mb-8">캠페인 설정</h2>
+                <ul class="mb-3">
+                  <li class="form-check form-check-inline items-center">
+                    <input class="form-check-input" type="radio" name="connectSetting" id="msg" value="msg" />
+                    <label class="font-bold text-sm lg:text-[14px]" class="form-check-label" for="msg">문자</label>
+                  </li>
+                  <li class="form-check form-check-inline items-center">
+                    <input class="form-check-input" type="radio" name="connectSetting" id="email" value="email" />
+                    <label class="font-bold text-sm lg:text-[14px]" class="form-check-label" for="email">이메일</label>
+                  </li>
+                  <li class="form-check form-check-inline items-center">
+                    <input class="form-check-input" type="radio" name="connectSetting" id="both" value="both" checked />
+                    <label class="font-bold text-sm lg:text-[14px]" class="form-check-label" for="both">문자&이메일</label>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="basic-input-wrap mb-6">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="userApi">메세지 유형 선택</label>
+                    <div class="flex">
+                      <select class="basic-select" name="" id="">
+                        <option value="1">자동응답</option>
+                        <option value="2">자동응답2</option>
+                        <option value="3">자동응답3</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="basic-input-wrap mb-4">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="listId">서비스 명 입력</label>
+                    <div class="flex">
+                      <input
+                        class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                        type="text"
+                        id="listId"
+                        placeholder="메세지에 들어갈 서비스 명을 입력하세요."
+                      />
+                    </div>
+                  </li>
+                  <li class="basic-input-wrap mb-4">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="listId">URL 입력</label>
+                    <div class="flex">
+                      <input
+                        class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                        type="text"
+                        id="listId"
+                        placeholder="메세지에 들어갈 홈페이지 URL을 입력하세요."
+                      />
+                    </div>
+                  </li>
+                  <li class="basic-input-wrap mb-12">
+                    <label class="font-bold text-sm mb-[10px] lg:text-[14px]" for="listId">메시지 API Key 입력</label>
+                    <div class="flex">
+                      <input
+                        class="w-full bg-white border-solid border-gray-d9 text-sm px-2.5 py-2.5 border-1 lg:text-[14px] lg:px-[16px] lg:py-[11px]"
+                        type="text"
+                        id="listId"
+                        placeholder="메시지 발송 API Key를 입력해 주세요."
+                      />
+                    </div>
+                    <p class="text-[12px] text-[#d10000] font-normal mt-[10px]">메세지는 API 연동으로 전송됩니다.</p>
+                  </li>
+                </ul>
+                <div>
+                  <button class="w-full py-3 text-sm font-bold text-white bg-biz-red leading-none rounded-md">메세지 전송</button>
+                </div>
+              </form>
+            </li>
+            <li class="p-[15px] col bg-white rounded-md lg:pt-[28px] lg:pb-[24px] lg:px-[22px]">
+              <h2 class="text-biz-red font-bold text-center text-lg mb-4 text-lg xl:mb-12">전송 문자 & 메일 샘플 미리보기</h2>
+              <div class="sample-box border leading-normal text-sm">
+                <span class="text-biz-blue">[이름]</span>님,<br />
+                <span class="text-biz-blue">[서비스 명]</span>쿠폰 이벤트에 신청해 주셔서 감사합니다.<br />
+                이용방법 및 기타 문의는 메세지 남겨 주시면 연락 드리겠습니다.<br />
+                <br />
+                ► 더 알아보기<br />
+                <span class="text-biz-blue">[홈페이지 URL]</span><br />
+                <br />
+                감사합니다.<br />
+              </div>
+              <p class="text-sm leading-normal text-[#777777] mt-7">
+                ※ [ ]사이 내용은 캠페인 설정에 따라 자동으로 입력됩니다.<br />
+                <br />
+                ※ 지나치게 긴 내용이나 반복된 메세지는 스팸차단 될 수 있으므로, 300자 내외로 작성하는 것을 권장드립니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-[#a6a6a6]">
+      <div class="footer-inner default-inner flex flex-col py-4 lg:p-3 lg:py-[100px] lg:px-[75px] lg:flex-row lg:items-center">
+        <figure class="footer-logo lg:mr-[89px] w-[185px] h-[89px]">
+          <img src="../../assets/images/common/logo.svg" alt="BIZDRM" />
+        </figure>
+        <div class="footer-content">
+          <div class="flex mb-10">
+            <a class="text-sm text-black mr-6 lg:text-lg" href="">서비스 이용약관</a>
+            <a class="text-sm text-black lg:text-lg" href="">개인정보처리방침</a>
+          </div>
+          <p class="text-sm mb-0 lg:text-lg">
+            아이에이엠파트너즈 I 통신판매신고번호 : 2021-충부청주-1203 I 대표이사 : 김현민 iampatners2023@gmail.com
+          </p>
+          <p class="text-sm mb-0 mt-1 lg:text-lg">고객센터 : 063-244-2919 I 주소 : 전라북도 전주시 덕진구 인후동1가 500-48</p>
+          <p class="text-sm mt-10 mb-0 lg:text-lg">Copyright (c) Iampartners All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
